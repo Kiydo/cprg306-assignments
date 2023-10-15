@@ -7,8 +7,6 @@ import { useState } from "react";
 export default function ItemList () {
     const [sortBy, setSortBy] = useState("name");
     
-    // const handleEvent = (event) => {
-    // event.preventDefault();
     if (sortBy === "name") {
         data.sort((a, b) => a.name.localeCompare(b.name));
     };
@@ -16,36 +14,27 @@ export default function ItemList () {
         data.sort((a, b) => a.category.localeCompare(b.category));
     };
         
-    // };
+    
     const handleSortName = () => {
         setSortBy("name");
     };
     const handleSortCategory = () => {
         setSortBy("category");
     };
-    // const handleSort = () => {
-        
-    //     if (sortBy === "name") {
-    //         data.sort((a, b) => a.name.localeCompare(b.name));
-    //     } else if (sortBy === "quantity") {
-    //         setSortBy("category");
-    //     } else {
-    //         setSortBy("name");
-    //     }
-    // };
+    
 
     return (
         <main>
-            {/* <form onSubmit={handleEvent}> */}
+            <div class="w-28 py-2 px-4 bg-gray-800 hover:bg-gray-500 rounded-md text-white">
                 <button onClick={handleSortName}>Sort by Name</button>
+            </div>
+            <div class="w-28 py-2 px-4 bg-gray-800 hover:bg-gray-500 rounded-md text-white">
                 <button onClick={handleSortCategory}>Sort by Category</button>
+            </div>
                 {data.map((item) => (
                     <Item name={item.name} quantity={item.quantity} category={item.category} />
                 ))}
 
-                {/* <button onClick={handleSortName}>Sort by Name</button>
-                <button onClick={handleSortCategory}>Sort by Category</button> */}
-            {/* </form> */}
             
         </main>
     );
