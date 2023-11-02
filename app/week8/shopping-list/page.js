@@ -1,6 +1,6 @@
 "use client";
 
-import { useUserAuth } from "./_utils/auth-context";
+// import { useUserAuth } from "./_utils/auth-context";
 import { useState } from "react";
 import NewItem from "./new-item";
 import ItemList from "./item-list";
@@ -9,8 +9,8 @@ import MealIdeas from "./meal-ideas";
 //import { useState } from "react";
 
 export default function Page() { 
-    const { user } = useUserAuth();
-    if(!user) return null;
+    // const { user } = useUserAuth();
+    // if(!user) return null;
 
     const [items, setItems] = useState(itemsData);
     const [selectedItem, setSelectedItem] = useState("");

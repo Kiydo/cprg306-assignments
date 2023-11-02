@@ -80,7 +80,6 @@ export default function NewItem({ onAddItem }) {
                 >
                     Add Item
                 </button>
-
             </form>
         </main>
        
