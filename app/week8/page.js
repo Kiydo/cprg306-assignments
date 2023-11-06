@@ -18,7 +18,7 @@ export default function Page() {
 
 
   return (
-    <main>
+    <main className="min-h-screen">
       
       {!user && (
         <button onClick={handleSignIn}>Sign In</button>
